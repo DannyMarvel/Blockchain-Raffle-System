@@ -2,7 +2,7 @@
 pragma solidity ^0.8.19;
 
 import {Script} from 'forge-std/Script.sol';
-import {Raffle} from 'scr/Raffle.sol';
+import {Raffle} from 'src/Raffle.sol';
 import {HelperConfig} from 'script/HelperConfig.s.sol';
 import {CreateSubscription, FundSubscripton, AddConsumer} from "script/Interactions.s.sol";
 
@@ -40,7 +40,7 @@ config.interval,
 config.vrfCoordinator,
 config.gasLane,
 config.subscriptionId,
-config.callbackGasLimit,
+config.callbackGasLimit
 );
 vm.stopBroadcast();
 AddConsumer addConsumer = new AddConsumer();
